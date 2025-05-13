@@ -2,46 +2,51 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 12px 24px;
+  background-color: #111;
+  color: white;
 }
 
-.logo h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1f2937;
+.mobileBanner {
+  display: none;
 }
 
-.nav {
+.logo img {
+  height: 40px;
+}
+
+.nav ul {
   display: flex;
-  gap: 2rem;
+  gap: 16px;
+  list-style: none;
 }
 
 .nav a {
-  color: #4b5563;
+  color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
 }
 
-.nav a:hover {
-  color: #0070f3;
-}
-
-.auth {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.userInfo {
+.right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 12px;
 }
 
-.userInfo span {
-  color: #4b5563;
-  font-weight: 500;
-} 
+.iconBtn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* 모바일 대응 예시 */
+@media (max-width: 768px) {
+  .mobileBanner {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-left: -24px;
+  }
+
+  .nav {
+    display: none;
+  }
+}
