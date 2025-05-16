@@ -1,11 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { IoSearchOutline } from 'react-icons/io5';
+import { useRouter } from 'next/navigation';
+import { IoSearchOutline, IoPersonOutline } from 'react-icons/io5';
 import { WiMoonAltWaningCrescent2 } from 'react-icons/wi';
 import { MdOutlineLogout } from 'react-icons/md';
-import { IoPersonOutline } from 'react-icons/io5';
 import { NavItem } from '../navItem/NavItem';
 import styles from './Header.module.css';
 
@@ -23,28 +22,36 @@ export const Header = ({
   onSignUp,
 }: HeaderProps) => {
   const [isTop, setIsTop] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsTop(window.scrollY === 0);
+      const scrollY = window.scrollY;
+      setIsTop(scrollY < 50);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className={styles.header}>
-      {/* 고정 상단 바 */}
-      <div className={styles.container}>
-        {/* 왼쪽 로고 */}
-        <div className={`${styles.left} ${!isTop ? styles.disabled : ''}`}>
-          <Link href="/" className={styles.logo}>
-            <img src="/logo.png" alt="Deukgeun" />
-          </Link>
+    <>
+      {/* 상단 바 (로고+아이콘) */}
+      <div className={`${styles.topBar} ${!isTop ? styles.hidden : ''}`}>
+        <div
+          className={styles.logo}
+          role="button"
+          tabIndex={0}
+          onClick={() => router.push('/')}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') router.push('/');
+          }}
+          style={{ cursor: 'pointer' }}
+        >
+          <img src="/logo.png" alt="Deukgeun" />
         </div>
 
-        {/* 우측 아이콘 */}
-        <div className={`${styles.icons} ${!isTop ? styles.disabled : ''}`}>
+        <div className={styles.icons}>
           <NavItem href="/intro">커뮤니티 소개</NavItem>
           <NavItem href="#"><IoSearchOutline /></NavItem>
           <NavItem href="#"><WiMoonAltWaningCrescent2 /></NavItem>
@@ -56,8 +63,8 @@ export const Header = ({
         </div>
       </div>
 
-      {/* 스크롤 따라 sticky 되는 메뉴바 */}
-      <div className={styles.centerSticky}>
+      {/* sticky 네비게이션 바 */}
+      <div className={`${styles.stickyNav} ${!isTop ? styles.atTop : ''}`}>
         <nav className={styles.nav}>
           <ul>
             <li><NavItem href="/missions-and-challenge">챌린지 & 인증</NavItem></li>
@@ -67,6 +74,7 @@ export const Header = ({
           </ul>
         </nav>
       </div>
-    </header>
+    </>
   );
 };
+
