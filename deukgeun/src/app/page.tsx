@@ -25,43 +25,8 @@ const HomePage: FC = () => {
         <div className={styles.featureCard}>
           <h2>Community</h2>
           <p>Connect with other fitness enthusiasts and share your journey</p>
-        </div>
-        <div className={styles.featureCard}>
-          <h2>Community</h2>
-          <p>Connect with other fitness enthusiasts and share your journey</p>
-        </div>
-        <div className={styles.featureCard}>
-          <h2>Community</h2>
-          <p>Connect with other fitness enthusiasts and share your journey</p>
-        </div>
-        <div className={styles.featureCard}>
-          <h2>Community</h2>
-          <p>Connect with other fitness enthusiasts and share your journey</p>
-        </div>
-        <div className={styles.featureCard}>
-          <h2>Community</h2>
-          <p>Connect with other fitness enthusiasts and share your journey</p>
-        </div>
-        <div className={styles.featureCard}>
-          <h2>Community</h2>
-          <p>Connect with other fitness enthusiasts and share your journey</p>
-        </div>
-        <div className={styles.featureCard}>
-          <h2>Community</h2>
-          <p>Connect with other fitness enthusiasts and share your journey</p>
-        </div>
-        <div className={styles.featureCard}>
-          <h2>Community</h2>
-          <p>Connect with other fitness enthusiasts and share your journey</p>
-        </div>
-        <div className={styles.featureCard}>
-          <h2>Community</h2>
-          <p>Connect with other fitness enthusiasts and share your journey</p>
-        </div>
-        <div className={styles.featureCard}>
-          <h2>Community</h2>
-          <p>Connect with other fitness enthusiasts and share your journey</p>
-        </div>
+        </div>        
+        
       </section>
     </main>
   );
