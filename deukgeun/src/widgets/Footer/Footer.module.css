@@ -1,0 +1,77 @@
+.footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 3rem 1.5rem;
+    font-size: 0.9rem;
+    user-select: none;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+  }
+  
+  .brand {
+    grid-column: span 2;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin-bottom: 0.75rem;
+  }
+  
+  .description {
+    line-height: 1.5;
+    color: #aaa;
+  }
+  
+  .nav {
+    display: contents;
+  }
+  
+  .navTitle {
+    font-weight: 600;
+    color: #eee;
+    margin-bottom: 0.75rem;
+  }
+  
+  .navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navList li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .navList a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .navList a:hover {
+    color: #7c3aed; /* purple-600 */
+  }
+  
+  .contact {
+    color: #bbb;
+  }
+  
+  .address p {
+    margin: 0.2rem 0;
+  }
+  
+  .copy {
+    margin-top: 3rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.8rem;
+  }
+  
