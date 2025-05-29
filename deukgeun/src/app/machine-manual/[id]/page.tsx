@@ -13,5 +13,5 @@ export default async function Page({ params }: MachinePageProps) {
     return notFound();
   }
 
-  return <MachineManualPage machine={machine} />;
+  return <MachineManualPage machine={machine} />;  
 }

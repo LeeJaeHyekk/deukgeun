@@ -2,7 +2,6 @@
 
 import { NavItem } from '@/widgets/navItem/NavItem'; // 경로는 프로젝트에 맞게 조정
 import styles from './Footer.module.css';
-import { FC } from 'react';
 
 type LinkItem = {
   label: string;

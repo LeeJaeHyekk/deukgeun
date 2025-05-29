@@ -1,5 +1,6 @@
 .main {
   min-height: calc(100vh - 64px); /* 헤더 높이를 제외한 전체 높이 */
+  background-image: linear-gradient(to right top, #b5a7af, #b9abb8, #bbb0c1, #bcb6cb, #babcd5, #b7c3de, #b3cae5, #aed1eb, #aadaef, #a8e2f1, #a8eaf1, #adf2ee);
   padding: 2rem;
 }
 
