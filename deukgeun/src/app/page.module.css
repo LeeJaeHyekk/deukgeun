@@ -1,147 +1,56 @@
 .main {
-  min-height: 100vh;
-  background-color: #0f172a;
-  background-image: linear-gradient(to right top, #eee0e9, #eadfea, #e5deea, #e1deea, #dcddea, #dadfec, #d8e1ed, #d7e3ed, #dae8ef, #deedf1, #e2f2f3, #e8f6f5);
-  color: #f1f5f9;
+  min-height: calc(100vh - 64px); /* 헤더 높이를 제외한 전체 높이 */
+  background-image: linear-gradient(to right top, #b5a7af, #b9abb8, #bbb0c1, #bcb6cb, #babcd5, #b7c3de, #b3cae5, #aed1eb, #aadaef, #a8e2f1, #a8eaf1, #adf2ee);
+  padding: 2rem;
 }
 
-.section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 6rem 1rem;
-}
-
-/* -------------------- Hero Section -------------------- */
 .hero {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4%;
-  padding: 6rem 2rem;
-  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, white, white);
+  color: white;
   border-radius: 1rem;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3rem;
 }
 
-.heroText {
-  flex: 1;
-}
-
-.heroText h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  background: linear-gradient(to right top, #895a78, #846082, #7e668b, #786d93, #717398, #69799d, #627fa0, #5d85a1, #598ba1, #59919e, #5d969a, #669b95);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 1rem;
-  line-height: 1.2;
 }
 
-.heroText p {
+.hero p {
   font-size: 1.25rem;
-  background: linear-gradient(to right top, #895a78, #846082, #7e668b, #786d93, #717398, #69799d, #627fa0, #5d85a1, #598ba1, #59919e, #5d969a, #669b95);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+  opacity: 0.9;
 }
 
-.heroImage {
-  flex: 1;
-  text-align: right;
-  opacity: 0.8;
-}
-
-.heroImage img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 1rem;
-}
-
-/* -------------------- Feature Section -------------------- */
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  padding-top: 2rem;
-  background-image: linear-gradient(to right top, #eee0e9, #eadfea, #e5deea, #e1deea, #dcddea, #dadfec, #d8e1ed, #d7e3ed, #dae8ef, #deedf1, #e2f2f3, #e8f6f5);
+  padding: 0 1rem;
 }
 
 .featureCard {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border-radius: 1rem;
+  background: white;
   padding: 2rem;
-  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
- 
 }
 
 .featureCard:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
 .featureCard h2 {
-  color: black;
+  color: #1f2937;
   font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: 1rem;
-
 }
 
 .featureCard p {
-  color: black;
-  line-height: 1.6;
-}
-
-/* -------------------- Philosophy Section -------------------- */
-.philosophy {
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 1rem;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 4rem 2rem;
-}
-
-/* -------------------- CTA Section -------------------- */
-.callToAction {
-  background: rgba(56, 189, 248, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
-  border-radius: 1rem;
-  color: #f8fafc;
-  text-align: center;
-  padding: 5rem 2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-.callToAction h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.callToAction p {
-  font-size: 1.1rem;
-  color: #e2e8f0;
-  margin-bottom: 2rem;
-}
-
-.callToAction button {
-  padding: 0.75rem 2rem;
-  background-color: #38bdf8;
-  color: #0f172a;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  border: none;
-  transition: all 0.2s;
-}
-
-.callToAction button:hover {
-  background-color: #7dd3fc;
-  color: #0f172a;
-}
+  color: #4b5563;
+  line-height: 1.5;
+} 
